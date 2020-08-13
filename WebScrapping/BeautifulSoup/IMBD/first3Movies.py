@@ -10,8 +10,11 @@ year = data.find_all(class_="lister-item-year text-muted unbold")
 # print(genre)
 for i in range(3):
     y = genre[i].string.strip().split(",")
-    print(movies[i].a.string, end = ";")
+    print(movies[i].a.string, end = " ; ")
     # print(year[i].string, end=" ")
-    for j in y:
-        print(j, end = ",")
+    for j in range(len(y)):
+        if j == len(y) - 1:
+            print(y[j], end = "")
+        else:
+            print(y[j], end=",")
     print()
